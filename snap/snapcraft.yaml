@@ -1,0 +1,29 @@
+name: appletree
+version: 0.1.0
+summary: Super Cool App
+description: Super Cool App that does everything!
+icon: snap/gui/appletree.png
+
+confinement: strict
+base: core18
+grade: stable
+
+slots:
+  dbus-appletree: # adjust accordingly to your app name
+    interface: dbus
+    bus: session
+    name: org.bar.appletree # adjust accordingly to your app name and
+
+apps:
+  appletree:
+    command: appletree
+    extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
+    plugs:
+      - network
+    slots:
+      - dbus-appletree
+parts:
+  appletree:
+    source: https://github.com/PrashantSaxenaV6001/appletree
+    plugin: flutter
+    flutter-target: lib/main.dart # The main entry-point file of the application

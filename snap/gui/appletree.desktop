@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0.0
+Name=appletree
+Comment=appletree
+Exec=appletree
+Icon=${SNAP}/meta/gui/appletree.png
+Terminal=false
+Type=Application
+Categories=Utility/Application;
